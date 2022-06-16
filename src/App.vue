@@ -50,7 +50,7 @@ body,#app{
 }
 
   svg {
-    width: 40px;
+    width: 30px;
     height: auto;
     cursor: pointer;
     overflow: visible;
@@ -89,14 +89,14 @@ body,#app{
 .nav-top{
   position: fixed;
   top: 20px;
-  left:50%;
-  transform:translate(-50%);
+  right:50%;
+  transform:translate(50%);
 }
 .nav-bottom{
   position: fixed;
   bottom: 20px;
   right:50%;
-  transform:translate(-50%) rotate(180deg);
+  transform:translate(50%) rotate(180deg);
 }
 
 .fade-enter-active,
