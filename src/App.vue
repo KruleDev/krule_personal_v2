@@ -89,7 +89,7 @@ body,#app{
 .nav-top{
   position: fixed;
   top: 20px;
-  right:50%;
+  left:50%;
   transform:translate(-50%);
 }
 .nav-bottom{
