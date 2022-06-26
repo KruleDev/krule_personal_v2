@@ -27,7 +27,7 @@
     $pink:hsl(346deg, 98%, 55%);
     $electro:hsl(181deg, 79%, 54%);
     $purple:hsl(261deg, 56%, 15%);
-    $night:hsl(261deg, 89%, 7%);
+    $night:#0d0222;
     $violet:hsl(284deg, 80%, 20%);
 
 
@@ -77,7 +77,7 @@
                 //backface-visibility: hidden;
                 //Line color
                 background-image:
-                    linear-gradient(to bottom, hsla(333, 83%, 53%, 0.3) 1px, transparent 1px),
+                    linear-gradient(to bottom, hsla(333, 83%, 53%, 0.302) 1px, transparent 1px),
                     linear-gradient(to right, hsla(333, 83%, 53%, 0.3) 1px, transparent 1px);
                 //Line spacing
                 background-size: 1px 30px, calc(60px)  1px;
@@ -85,6 +85,19 @@
 
                 animation: synth-lines 24s linear infinite;
             }
+        }
+        &__sun{
+            background: linear-gradient(to bottom, #f2ec4f 10%, #c81548 60%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            border-radius: 100%;
+            z-index: 2;
+            overflow: hidden;
         }
     }
 

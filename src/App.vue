@@ -49,7 +49,7 @@ body,#app{
   color:white;
 }
 
-  svg {
+  svg:not(.splide__arrow svg) {
     width: 30px;
     height: auto;
     cursor: pointer;

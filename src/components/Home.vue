@@ -86,12 +86,12 @@
             top: -2.3rem;
             left: .4rem;
             //Triangle
-            border-top: rgba(207, 51, 217, 0.24) 400px solid;
+            border-top: rgba(109, 208, 238, 0.35)400px solid;
             border-left: transparent 80px solid;
             border-right: transparent 270px solid;
             transform: skewX(20deg) rotate( 5deg);
             //Second triangle
-            filter: drop-shadow(-10px 14px 0px rgba(109, 208, 238, 0.57));
+            filter: drop-shadow(-10px 14px 0px rgba(207, 51, 217, 0.34) );
         }
         &__title{
             font-size: 1.25em;
@@ -104,7 +104,9 @@
         }
 
         .letter{
-            -webkit-text-stroke: 2px #2de3e6;;
+            //-webkit-text-stroke: 2px #2de3e6;
+                filter: drop-shadow(0 0 6px #CF33D9) drop-shadow(0 0 6px #CF33D9);
+
               display: inline-block;
             &:hover{
                 filter: drop-shadow(0 0 6px #CF33D9) drop-shadow(0 0 6px #CF33D9);

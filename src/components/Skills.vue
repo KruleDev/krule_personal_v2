@@ -3,8 +3,12 @@
 </script>
 
 <template>
+  
     <section class="skill-section">
-        <h1>SKILL SECTION</h1>
+  <template>
+
+</template>
+        
         <router-link to="/" class="nav-right">
             <svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
@@ -16,3 +20,6 @@
         </router-link>
     </section>
 </template>
+<style lang="scss">
+
+</style>

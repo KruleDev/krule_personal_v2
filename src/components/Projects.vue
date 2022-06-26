@@ -1,6 +1,28 @@
+<script>
+
+</script>
 <template>
+
+<Splide :options="{ rewind: true, pagination:false,}" aria-label="My Favorite Images">
+    <SplideSlide>
+            <article class="project-card">
+            <h2 class="project-card__title">Project 1</h2>
+            <div class="project-card__body">
+                <img src="../assets/img/project-2.png" alt="" class="project-card__body__image">
+                <div class="prject-card__body__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorem eligendi eveniet est, ut voluptate!
+                </div>
+            </div>
+            <button  class="project-card__cta">Website live </button>
+
+        </article>
+    </SplideSlide>
+    <SplideSlide>
+            <h1>mdr</h1>
+    </SplideSlide>
+  </Splide>
     <section class="project-section">
-        <h1>PROJECT SECTION</h1>
+       
         <router-link to="/" class="nav-bottom">
             <svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
@@ -12,3 +34,104 @@
         </router-link>
     </section>
 </template>
+<style lang="scss">
+        @import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    width:clamp(18rem, 60vw, 60rem);
+    margin:auto;
+    
+    background: linear-gradient(180deg, rgba(80, 18, 83, 0.6) 11.81%, #311949 111.81%);
+    &__title{
+        position: relative;
+        font-family: 'Streamster';
+        text-transform: uppercase;
+        padding:1rem;
+        text-indent:6.5vw;
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        margin-bottom: 1rem;
+        color:#2de3e6;
+        &::before{
+            content:"";
+            position: absolute;
+            border-left: clamp(3.6rem,12vw,12rem) solid transparent;
+            border-right: clamp(14.4rem,48vw,48rem) solid transparent;
+            border-top: clamp(5rem, 6.5vw, 6rem) solid rgba(75, 132, 149, .24);
+            left: 0;
+            top:0;
+        }
+    }
+    &__body{
+        display: flex;
+        gap:2rem;
+        max-width: 90%;
+        margin: auto;
+        &__image{
+            max-width: 25rem;
+        }
+
+    }
+     &__cta{
+        padding: .75rem 3rem;
+        background-color: rgba(75, 132, 149, .24);
+        outline: none;
+        color:white;
+        font-family: 'Radwave';
+        isolation: isolate;
+        position: relative;
+        border:0;
+        cursor: pointer;
+        max-width: 90%;
+        align-self: flex-end;
+        margin:0 5% 1.5rem 0;
+
+        clip-path: polygon(
+            1rem 0%,
+            100% 0,
+            100% calc(100% - 1rem),
+            calc(100% - 1rem) 100%,
+            0 100%,
+            0% 1rem
+        );
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset:0;
+            background: rgba(75, 132, 149, .12);
+            z-index: -2;
+
+
+        }   
+        &:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(75, 132, 149, .12);
+            z-index: -1;
+            clip-path: polygon(
+                // top left 1
+                2px calc(2px + 2px * 0.5),
+                // top left 2
+                calc(2px + 2px * 0.5) 2px,
+                // top right
+                calc(100% - 2px) 2px,
+                //bottom right - 1
+                calc(100% - 2px)
+                calc(100% - calc(2px + 2px * 0.5)),
+                // bottom right - 2
+                calc(100% - calc(2px + 2px * 0.5))
+                calc(100% - 2px),
+                // bottom left
+                calc(2px) calc(100% - 2px)
+            );
+            transition: clip-path 500ms;
+        }
+    }
+
+    
+}
+</style>
