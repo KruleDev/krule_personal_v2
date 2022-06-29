@@ -67,36 +67,79 @@ body,#app{
     &:hover .arrow {
       animation: arrow-anim 1.5s ease-in-out infinite;
 
+
     }
     &:hover .arrow-fixed {
       animation: arrow-fixed-anim 1.5s ease-in-out infinite;
 
     }
   }
+.tooltip{
+  visibility: hidden;
+  position: absolute;
+}
 
 .nav-left{
   position: fixed;
   bottom: 50%;
   left:20px;
   transform:translateY(-50%)rotate(-90deg);
+    &:hover .tooltip{
+    visibility: visible;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  }
 }
 .nav-right{
   position: fixed;
   bottom: 50%;
   right:20px;
   transform:translateY(-50%)rotate(90deg);
+  &:hover .tooltip{
+    visibility: visible;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+  }
+
 }
+
 .nav-top{
   position: fixed;
   top: 20px;
   right:50%;
   transform:translate(50%);
+    &:hover .tooltip{
+    visibility: visible;
+    color: #fff;
+    text-align: center;
+    bottom: -100%;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
 .nav-bottom{
   position: fixed;
   bottom: 20px;
   right:50%;
   transform:translate(50%) rotate(180deg);
+    &:hover .tooltip{
+    visibility: visible;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  }
 }
 
 .fade-enter-active,

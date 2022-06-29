@@ -2,27 +2,33 @@
 
 </script>
 <template>
-
-<Splide :options="{ rewind: true, pagination:false,}" aria-label="My Favorite Images">
-    <SplideSlide>
-            <article class="project-card">
-            <h2 class="project-card__title">Project 1</h2>
-            <div class="project-card__body">
-                <img src="../assets/img/project-2.png" alt="" class="project-card__body__image">
-                <div class="prject-card__body__description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorem eligendi eveniet est, ut voluptate!
-                </div>
-            </div>
-            <button  class="project-card__cta">Website live </button>
-
-        </article>
-    </SplideSlide>
-    <SplideSlide>
-            <h1>mdr</h1>
-    </SplideSlide>
-  </Splide>
     <section class="project-section">
-       
+        <Splide :options="{ rewind: true, pagination: false, }" >
+            <SplideSlide>
+                <article class="project-card">
+                    <h2 class="project-card__title">Project 1</h2>
+                    <div class="project-card__body">
+                        <img src="../assets/img/project-2.png" alt="" class="project-card__body__image">
+                        <div class="prject-card__body__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorem eligendi eveniet est, ut voluptate!
+                        </div>
+                    </div>
+                    <button  class="project-card__cta">Website live </button>
+                </article>
+            </SplideSlide>
+            <SplideSlide>
+                <article class="project-card">
+                    <h2 class="project-card__title">Project 1</h2>
+                    <div class="project-card__body">
+                        <img src="../assets/img/project-3.png" alt="" class="project-card__body__image">
+                        <div class="prject-card__body__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorem eligendi eveniet est, ut voluptate!
+                        </div>
+                    </div>
+                    <button  class="project-card__cta">Website live </button>
+                </article>
+            </SplideSlide>
+        </Splide>
         <router-link to="/" class="nav-bottom">
             <svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
@@ -35,8 +41,10 @@
     </section>
 </template>
 <style lang="scss">
-        @import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
-
+@import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
+.project-section{
+   width:clamp(20rem, 95vw, 68rem);
+}
 .project-card{
     display: flex;
     flex-direction: column;
@@ -66,6 +74,7 @@
     }
     &__body{
         display: flex;
+        flex-direction: column;
         gap:2rem;
         max-width: 90%;
         margin: auto;
@@ -133,5 +142,16 @@
     }
 
     
+}
+@media screen and  (min-width: 75em){
+    .project-card{
+        &__body{
+            flex-direction: row;
+            &__image{
+                max-width: 25rem;
+            }
+
+        }
+    }
 }
 </style>

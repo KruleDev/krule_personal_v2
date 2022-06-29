@@ -5,10 +5,16 @@
 <template>
   
     <section class="skill-section">
-  <template>
+        <div class="tag-description">
+            <div class="tag-description__title">
+                Vue js
+            </div>
+            <p class="tag-description__body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sed voluptatum recusandae sequi fuga reprehenderit.
+            </p>
+        </div>
+        <img src="../assets/img/tagcloud.png" alt="">
 
-</template>
-        
         <router-link to="/" class="nav-right">
             <svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="prev" transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
@@ -18,8 +24,46 @@
                 </g>
             </svg>
         </router-link>
+
     </section>
+       
 </template>
 <style lang="scss">
-
+.skill-section{
+    display: flex;
+    align-items: center;
+    gap:2rem
+}
+.tag-description{
+    display: flex;
+    flex-direction: column;
+    gap:4rem;
+    background: linear-gradient(180deg, rgba(80, 18, 83, 0.6) 11.81%, #311949 111.81%);
+    width:clamp(18rem,50vw,30rem);
+    &__title{
+        position: relative;
+        font-family: 'Streamster';
+        text-transform: uppercase;
+        padding:1rem;
+        text-indent:6.5vw;
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        margin-bottom: 1rem;
+        color:#2de3e6;
+         &::before{
+            content:"";
+            position: absolute;
+            border-left: clamp(3.6rem,10vw,6rem) solid transparent;
+            border-right: clamp(14.4rem,40vw,24rem) solid transparent;
+            border-top: clamp(5rem, 6.5vw, 6rem) solid rgba(75, 132, 149, .24);
+            left: 0;
+            top:0;
+        }
+    }
+    &__body{
+        max-width: 90%;
+        margin: auto;
+        line-height: 1.25;
+        margin-bottom: 2rem;
+    }
+}
 </style>
