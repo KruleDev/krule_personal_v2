@@ -78,12 +78,15 @@ body,#app{
   visibility: hidden;
   position: absolute;
 }
+#arrow-left{
+    transform: rotate(0deg) ;
 
+}
 .nav-left{
   position: fixed;
   bottom: 50%;
   left:20px;
-  transform:translateY(-50%)rotate(-90deg);
+
     &:hover .tooltip{
     visibility: visible;
     width: 120px;
@@ -92,13 +95,23 @@ body,#app{
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
+    left:50%;
+    translate:50%;
+    bottom:-100%;
   }
+}
+#arrow-right{
+    transform: rotate(180deg) ;
+
 }
 .nav-right{
   position: fixed;
   bottom: 50%;
   right:20px;
-  transform:translateY(-50%)rotate(90deg);
+  &__arrow{
+    transform:translateY(-50%)rotate(90deg);
+
+  }
   &:hover .tooltip{
     visibility: visible;
     width: 120px;
@@ -107,6 +120,9 @@ body,#app{
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
+    right:50%;
+    translate:50%;
+    bottom:-100%;
     
   }
 
@@ -116,7 +132,10 @@ body,#app{
   position: fixed;
   top: 20px;
   right:50%;
+  &__arrow{
   transform:translate(50%);
+
+  }
     &:hover .tooltip{
     visibility: visible;
     color: #fff;
@@ -126,12 +145,17 @@ body,#app{
     transform: translate(-50%);
   }
 }
+#arrow-bottom{
+  transform: rotate(-90deg);
+}
 .nav-bottom{
   position: fixed;
   bottom: 20px;
   right:50%;
-  transform:translate(50%) rotate(180deg);
-    &:hover .tooltip{
+  &__arrow{
+  transform:rotate(90deg);
+  }
+  &:hover .tooltip{
     visibility: visible;
     width: 120px;
     background-color: black;
@@ -139,6 +163,9 @@ body,#app{
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
+    top:-100%;
+    left: 50%;
+    transform: translate(-50%);
   }
 }
 
